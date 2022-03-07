@@ -1,2 +1,2 @@
-# django_auth
-Django User Login and Logout flow. 
+# django Auth Example
+Django User Registration, Login and Logout flow. 
