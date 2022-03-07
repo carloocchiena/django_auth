@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %} 
 
 {% block content %}
@@ -11,44 +10,44 @@
             </div>
             
             <div class="row">
-                <div class="col-md-6 offset-md-3 mt-3">
+                <div class="col-md-6 offset-md-3 mt-5">
                     
                     <form method="post" action="{% url 'login' %}">
                     {% csrf_token %}
                     <div class="form-group">
                         {{ form.username.label_tag }}
                         <input
-                        type="text"
-                        name="username"
-                        class="form-control"
-                        maxlength="150"
-                        id="id_username"
-                        required
+                            type="text"
+                            name="username"
+                            class="form-control"
+                            maxlength="150"
+                            id="id_username"
+                            required
                         />
                     </div>
                     
                     <div class="form-group">
                         {{ form.password.label_tag }}
                         <input
-                        type="password"
-                        name="password"
-                        class="form-control"
-                        id="id_password"
-                        required
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            id="id_password"
+                            required
                         />
                     </div>
                     
                     {% if form.non_field_errors %} 
                     
                         {% for error in form.non_field_errors %}
-                        <p style="font-size: 13px;">
-                            {{ error|escape }}
-                        </p>
+                            <p style="font-size: 13px;">
+                                {{ error|escape }}
+                            </p>
                         {% endfor %} 
                     
                     {% endif %}
                     
-                    <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </form>
                 </div>
             </div>
